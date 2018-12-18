@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo -H ./HDSentinel -html -r 
 sudo -H ./HDSentinel -r 
-sudo -H chown $(whoami):$(whoami) report.*
+sudo -H chown $(whoami):$(whoami) report*.*
 mkdir reports_bak/
 mv -f report.html report_$(date +"%m_%d_%Y").html
 mv -f report.txt report_$(date +"%m_%d_%Y").txt
@@ -12,6 +12,6 @@ else
 fi
 sudo -H mv -f report*.* reports_bak/
 cd reports_bak/
-sudo -H chown $(whoami):$(whoami) report.*
+sudo -H chown $(whoami):$(whoami) report*.*
 clear
 exit 0
